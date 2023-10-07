@@ -1,0 +1,28 @@
+.upload {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding-top: 20px;
+
+  span {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .inputFile {}
+
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      border-style: none;
+      background-color: lightgray;
+      border-radius: 5px;
+    }
+  }
+}
