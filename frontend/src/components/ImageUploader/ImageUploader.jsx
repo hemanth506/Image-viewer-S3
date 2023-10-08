@@ -6,19 +6,27 @@ function ImageUploader() {
   const [image, setImage] = useState();
   const [caption, setCaption] = useState("");
 
-  const formSubmit = async () => {
+  const formSubmit = async (event) => {
+    event.preventDefault();
     console.log("formSubmit");
-
-    const formData = new FormData();
-    formData.append("image", image);
-    formData.append("caption", caption);
+    // const formData = new FormData();
+    // formData.append("image", image);
+    // formData.append("caption", caption);
+    const formData = {
+      image,
+      caption,
+    };
     console.log(
-      "🚀 ~ file: ImageUploader.jsx:17 ~ formSubmit ~ process.env.REACT_APP_BACKEND_API:",
+      "🚀 ~ file: process.env.REACT_APP_BACKEND_API:",
       process.env.REACT_APP_BACKEND_API
     );
-    await axios.post("http://localhost:3001/api/post", formData, {
-      headers: { "Content-Type": "multipart/form-data" },
-    });
+    try{
+      await axios.post(process.env.REACT_APP_BACKEND_API, formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+    } catch(err) {
+      console.log("🚀 ~ file: ImageUploader.jsx:28 ~ formSubmit ~ err:", err)
+    }
   };
 
   return (
