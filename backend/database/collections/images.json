@@ -1,0 +1,19 @@
+{
+  "totalImageData": 3,
+  "data": [
+    {
+      "fieldname": "image",
+      "fileName": "Kobe-bryant.jpg",
+      "encryptedFileName": "5188f4ef7b533f738da936b7b2df3230d3477bfb4debe5225903a3763bb589f7",
+      "contentType": "image/jpeg",
+      "timeStamp": "8/10/2023, 2:44:11 pm"
+    },
+    {
+      "fieldname": "image",
+      "fileName": "Tom-jerry.jpg",
+      "encryptedFileName": "024cc6d8816115a8515bf89be587ee101bd795102e8edd60f5bfa180b300cc59",
+      "contentType": "image/jpeg",
+      "timeStamp": "8/10/2023, 2:44:24 pm"
+    }
+  ]
+}
